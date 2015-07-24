@@ -16,6 +16,7 @@
 
 <?php
     //form values in $_POST
+    $id = 7;
     $menu_name = "Delete This";
     $position = 4;
     $visible = 1;
@@ -31,6 +32,7 @@
 
 	$test = mysqli_query($connect, $query);
 
+	if ($test && mysqli_affected_rows($connect) == 1) {
 		// Success
 		// redirect_to("somepage.php");
 		echo "Success!";
