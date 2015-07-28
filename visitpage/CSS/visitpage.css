@@ -13,19 +13,19 @@ body {
 }
 
 img { border: none; }
-a { color: darkred; }
-a:hover { color: blue; }
+a { color: darkblue; }
+a:hover { color: lightyellow; }
 	
 #header { 
 	height: 70px; 
-	margin: 0; padding: 0; text-align: left; 
+	margin: 0; padding: 0; text-align: center; 
   background: darkblue; color: lightgreen;
 }
 #header h1 { padding: 1em; margin: 0; }
 #main { 
 	height: 600px; width: 100%; 
 	margin: 0; padding: 0; 
-	background: lightyellow;
+	background: lightpink;
 }
 #footer { 
 	clear: both;
@@ -39,7 +39,7 @@ a:hover { color: blue; }
 	float: right;
 	width: 150px; height: 100%; 
 	margin: 0; padding: 0 2em; 
-	color: lightblue; background: darkred;
+	color: lightblue; background: darkgreen;
 }
 #navigation a { color: lightblue; text-decoration: none; }
 #navigation a:hover { color: white; }
@@ -53,7 +53,7 @@ ul.pages { padding-left: 2em; list-style: square; }
 #page { 
 	float: left; height: 100%;
 	padding-left: 2em; vertical-align: top; 
-	background: lightyellow;
+	background: lightpink;
 }
-#page h2 { color: darkred; margin-top: 1em;}
-#page h3 { color: darkred; }
+#page h2 { color: darkblue; margin-top: 1em;}
+#page h3 { color: darkblue; }
