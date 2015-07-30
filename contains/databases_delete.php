@@ -16,29 +16,24 @@
 
 <?php
     //form values in $_POST
-    $menu_name = "Nowadays's Shanghai Tour";
-    $position = 4;
-    $visible = 1;
-
-    //Escape strings from all sources
-    $menu_name = mysqli_real_escape_string($connect, $menu_name);   //Prevent SQL injection from leaking data
+    $id = 10;
 
 	// 2. Perform database query
-	$query  = "INSERT INTO subjects (";
-	$query .= "  menu_name, position, visible";
-	$query .= ") VALUES (";
-	$query .= "  '{$menu_name}', {$position}, {$visible}";
-	$query .= ")";
+	$query  = "DELETE FROM subjects ";
+    $query .= "WHERE id = {$id} ";
+    $query .= "LIMIT 1";    //To protect the data from being delete accidently 
+
+
 
 	$test = mysqli_query($connect, $query);
 
-	if ($test) {
+	if ($test && mysqli_affected_rows($connect) == 1) {
 		// Success
 		// redirect_to("somepage.php");
 		echo "Success!";
 	} else {
 		// Failure
-		// $message = "Subject creation failed";
+		// $message = "Category delete failed";
 		die("Database query failed. " . mysqli_error($connect));
 	}
 ?>

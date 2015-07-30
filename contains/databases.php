@@ -11,14 +11,16 @@
     if(mysqli_connect_errno()) {
         die("Failed to connect database: " . mysqli_connect_error() .  " (" . mysqli_connect_errno() . ")");
     }
+//    } else {
+//        echo mysqli_connect_errno(); //it will be 0   
+//    }
 ?>
 
 <?php
     //2. Database query
     $query  = "SELECT * ";
-    $query .= "FROM pages ";
-    $query .= "WHERE subject_id=2 ";  
-    $query .= "ORDER BY position DESC";
+    $query .= "FROM subjects ";
+    $query .= "ORDER BY position ASC";
 
     $test = mysqli_query($connect, $query);
 
@@ -43,8 +45,8 @@
             while($category = mysqli_fetch_assoc($test)){
         ?>  
 
-            <li><?php echo $category["menu_name"]; ?></li>
-        
+            <li><?php echo $category["menu_name"] . " (" . $category["id"] . ")"; ?></li>
+            
         <?php
             }
         ?>
@@ -52,7 +54,7 @@
         
         <?php
             //4. Release the fetched data
-            mysql_free_result($test);
+            mysqli_free_result($test);
         ?>
 	</body>
 </html>
