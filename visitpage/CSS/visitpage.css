@@ -19,7 +19,7 @@ a:hover { color: lightyellow; }
 #header { 
 	height: 70px; 
 	margin: 0; padding: 0; text-align: center; 
-  background: darkblue; color: lightgreen;
+  background: darkred; color: lightgreen;
 }
 #header h1 { padding: 1em; margin: 0; }
 #main { 
@@ -39,7 +39,7 @@ a:hover { color: lightyellow; }
 	float: right;
 	width: 150px; height: 100%; 
 	margin: 0; padding: 0 2em; 
-	color: lightblue; background: darkgreen;
+	color: lightblue; background: blue;
 }
 #navigation a { color: lightblue; text-decoration: none; }
 #navigation a:hover { color: white; }
