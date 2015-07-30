@@ -1,4 +1,4 @@
-<div id="footer">SH Tour Site</div>
+<div id="footer">Shanghai Tour Site</div>
 	</body>
 </html>
 
